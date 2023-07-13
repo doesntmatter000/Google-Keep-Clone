@@ -1,0 +1,50 @@
+.Main__wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  & div:hover svg {
+    color: #212121;
+  }
+
+  & div:only-child {
+      width: 20px;
+      height: 20px;
+      z-index: 10;
+      pointer-events: all;
+  }
+
+  & svg {
+    transition: .2s ease;
+    width: 100%;
+    height: 100%;
+    color: #757575;
+  }
+}
+
+.item {
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .2s ease;
+  pointer-events: all;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+}
+
+.input {
+  cursor: pointer;
+  width: 20px;
+  height: 20px; 
+}

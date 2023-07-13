@@ -1,0 +1,35 @@
+.Main{
+  width: 600px;
+  height: fit-content;
+  max-width: 600px;
+  box-shadow: 0px 2px 9px -2px rgba(0,0,0,.7);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 9; 
+  overflow: hidden;
+  padding: 15px;
+}
+
+.Main__input {
+  width: 100%;
+  height: 25px;
+  line-height: 20;
+  border-radius: 7px;
+  color: #202124;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.entry__wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

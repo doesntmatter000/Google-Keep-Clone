@@ -1,0 +1,38 @@
+.Tcomponent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.Tcomponent__title {
+  pointer-events: none;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding-bottom: 12px;
+  letter-spacing: .00625em;
+  color: rgba(0,0,0,0.6);
+}
+
+.Tcomponent__title-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #202124;
+  font-weight: 600;
+  resize: none;
+  border: none;
+  z-index: 20;
+  width: 100%;
+  max-width: 532px;
+  min-height: 35px;
+  white-space: pre-wrap;
+  outline: none;
+  min-height: 15px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
