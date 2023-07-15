@@ -1,19 +1,35 @@
-import { useEffect, useState } from "react"
-import { useAppSelector } from "../../store/hook";
-export const useToggleMainInput = (MainRef:React.RefObject<HTMLDivElement>) => {
+import { useEffect } from "react"
+import { useAppDispatch, useAppSelector } from "../../store/hook";
+import { mainStateToggle, imgStateToggle, uploadImg, changeBackColor, changeBackImage } from "../../store/features";
+export const useToggleMainInput = (MainRef?: React.RefObject<HTMLDivElement>) => {
 
-    const [mainIsOpen, setMainIsOpen] = useState(false);
-
+    const dispatch = useAppDispatch()
     useEffect(() => {
         let handler = (e: Event) => {
-            if (!MainRef.current?.contains(e.target as Node)) {
-                setMainIsOpen(false)
+            if (MainRef) {
+                if (!MainRef.current?.contains(e.target as Node)) {
+                    dispatch(mainStateToggle(false))
+                    dispatch(imgStateToggle(false))
+                    dispatch(uploadImg(null))
+                    dispatch(changeBackColor("white"))
+                    dispatch(changeBackImage("none"))
+                }
             }
         }
         document.addEventListener("mousedown", handler)
     })
 
-    let imgToggleMainOpen = useAppSelector(state => state.imgSlice.imgUploaded) ? true : false
+    const closeMainInput = () => {
+        dispatch(mainStateToggle(false))
+    }
+    const openMainInput = () => {
+        dispatch(mainStateToggle(true))
+    }
+
     
-    return {mainIsOpen, setMainIsOpen, imgToggleMainOpen}
+
+    let imgToggleMainOpen = useAppSelector(state => state.mainInputState.imgState)
+    let mainState = useAppSelector(state => state.mainInputState.mainState)
+
+    return { imgToggleMainOpen, mainState, closeMainInput, openMainInput }
 }

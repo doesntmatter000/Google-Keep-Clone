@@ -3,18 +3,18 @@ import {
   faSquareCheck,
   faPaintbrush,
 } from "@fortawesome/free-solid-svg-icons";
-import "./EntryTools.scss";
 import { GetImg } from "./GetImg/GetImg";
+import "./EntryTools.scss";
 
 type EntryToolsProps = {
-  comoponentState: boolean;
+  mainState: boolean;
 };
 
-export const EntryTools = ({ comoponentState }: EntryToolsProps) => {
+export const EntryTools = ({ mainState }: EntryToolsProps) => {
   return (
     <div
       className="Main__wrapper"
-      style={comoponentState ? { display: "none" } : { display: "flex" }}
+      style={mainState ? { display: "none" } : { display: "flex" }}
     >
       <div className="item">
         <div>

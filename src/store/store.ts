@@ -1,9 +1,11 @@
+
 import { configureStore } from '@reduxjs/toolkit'
-import { imgSlice } from './features/imgSlice'
+import { imgSlice, mainInputState } from './features'
 
 const store = configureStore({
     reducer: {
-        imgSlice: imgSlice.reducer
+        imgSlice: imgSlice.reducer,
+        mainInputState: mainInputState.reducer
     }
 })
 

@@ -1,17 +1,18 @@
 .title__icon {
-  transform: translateY(-7px);
+  transform: translateY(0px);
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 7.5px;
+  top: 5px;
   z-index: 100;
 }
 
 .title__svg {
+  position: absolute;
+  top: 8px;
+  right: 7px;
   width: 23px;
   height: 23px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   color: #757575;
   cursor: pointer;
 

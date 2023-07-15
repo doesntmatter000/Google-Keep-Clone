@@ -6,9 +6,9 @@ import { uploadImg } from "../../../../../store/features/imgSlice";
 export const GetImg = () => {
 
   const dispatch = useAppDispatch()
-
+  
   return (
-    <label className="input" htmlFor="file">
+    <label className="label" htmlFor="file">
       <div>
         <input
           type="file"

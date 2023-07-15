@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "./Tools//colors//colors.scss";
 
 * {
   margin: 0;
@@ -16,8 +17,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -26,7 +27,11 @@ body {
   pointer-events: all;
 
   &:hover {
-    background-color: rgba(234, 234, 234, 0.5);
+    background-color: $primaryBackgroundIconColorHover;
   }
+}
+
+.sidePaddings {
+  padding: 0 15px 0 15px;
 }
 

@@ -4,21 +4,26 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  background: transparent;
+  padding: 10px 15px 0 15px;
 }
 
 .Tcomponent__title {
+  width: 100%;
   pointer-events: none;
+  background: transparent;
   position: absolute;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
-  padding-bottom: 12px;
   letter-spacing: .00625em;
   color: rgba(0,0,0,0.6);
 }
 
 .Tcomponent__title-text {
+  background: transparent;
   font-family: 'Roboto', sans-serif;
+  height: 25px;
   font-size: 18px;
   color: #202124;
   font-weight: 600;
@@ -27,10 +32,8 @@
   z-index: 20;
   width: 100%;
   max-width: 532px;
-  min-height: 35px;
   white-space: pre-wrap;
   outline: none;
-  min-height: 15px;
 
   &::-webkit-scrollbar {
     width: 0;

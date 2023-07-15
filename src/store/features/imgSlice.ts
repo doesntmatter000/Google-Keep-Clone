@@ -13,7 +13,7 @@ export const imgSlice = createSlice({
     name: "img",
     initialState,
     reducers: {
-        uploadImg: (state, action: PayloadAction<string>) => {
+        uploadImg: (state, action: PayloadAction<string | null>) => {
             state.imgUploaded = action.payload
         }
     }

@@ -9,13 +9,26 @@
   align-items: center;
   position: relative;
   z-index: 9; 
-  overflow: hidden;
-  padding: 15px;
+  overflow: inherit;
+  padding: 0px;
 }
 
-.Main__input {
+.wrapper {
+  position: relative;
   width: 100%;
-  height: 25px;
+  height: 100%;
+}
+
+
+// transition: background-image .3s ease;
+// background-position-x: right;
+// background-position-y: bottom;
+// background-size: cover;
+
+.Main__input {
+  background: transparent;
+  width: 100%;
+  height: 45px;
   line-height: 20;
   border-radius: 7px;
   color: #202124;
@@ -24,6 +37,7 @@
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  padding: 15px;
 }
 
 .entry__wrapper {

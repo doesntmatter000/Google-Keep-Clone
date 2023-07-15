@@ -12,7 +12,7 @@ export const TitleInput = () => {
     <>
       <div className="Tcomponent__title" style={titleValue === "" ? {display: "block"} : {display: "none"}}>Titlu</div>
       <textarea
-        onChange={(event) => handleEvent(event, "35px")}
+        onChange={(event) => handleEvent(event, "25px")}
         className="Tcomponent__title-text"
         required
       />
