@@ -1,4 +1,4 @@
-import { useEffect, RefObject, useState, Ref } from 'react';
+import { useEffect, RefObject, useState } from 'react';
 import { useAppDispatch } from '../../../../store/hook';
 import { toggleOptions, changeBackColor, changeBackImage } from '../../../../store/Slices/mainInputSlice';
 

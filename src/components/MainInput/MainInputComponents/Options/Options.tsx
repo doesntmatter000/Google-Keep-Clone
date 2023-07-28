@@ -39,7 +39,7 @@ export const Options = () => {
             key={index}
             onClick={(e) => switchColor(e.currentTarget)}
             className="color__item"
-            style={{ backgroundColor: `${colors[index]}` }}
+            style={{ backgroundColor: `${item}` }}
           ></button>
         ))}
       </div>
@@ -56,7 +56,7 @@ export const Options = () => {
             key={index}
             onClick={(e) => switchBackground(e.currentTarget)}
             className="back__item"
-            style={{ backgroundImage: `url(${images[index]})` }}
+            style={{ backgroundImage: `url(${item})` }}
           ></button>
         ))}
       </div>
