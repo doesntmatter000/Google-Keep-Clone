@@ -7,7 +7,7 @@ import {
   TitleIcon,
   MainInput,
   ToDoList,
-} from ".";
+} from "./";
 import "./MainInputComponent.scss";
 import { useToggleMainInput } from "../../Tools/CustomHooks.ts/useToggleMainInput";
 import { useAppSelector } from "../../store/hook";
