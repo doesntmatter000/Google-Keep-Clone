@@ -7,6 +7,7 @@ import "./MainTools.scss"
 import { useToggleMainInput } from "../../../../Tools/CustomHooks.ts/useToggleMainInput";
 import { CustomTheme } from "./CustomTheme/CustomTheme";
 import { useAppSelector } from "../../../../store/hook";
+import { Options } from "../Options/Options";
 
 type ToolProps = {
   mainState: boolean
@@ -17,6 +18,7 @@ export const MainTools = ({mainState}:ToolProps) => {
   
   return (
     <div className="Tools" style={mainState ? {display: "flex", backgroundColor: `${color}`} : {display: "none"}}>
+      <Options/>
       <div className="wrapper__tools">
         <div className="wrapper__tools-item item">
             <GetImg/>

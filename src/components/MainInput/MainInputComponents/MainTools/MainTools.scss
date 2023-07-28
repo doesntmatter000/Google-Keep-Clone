@@ -8,6 +8,7 @@
     padding: 10px 15px 0px 5px;
     transition: background-color .3s ease;
     border-radius: 0 0 7px 7px;
+    position: relative;
 }
 
 .wrapper__tools {
@@ -16,7 +17,8 @@
     align-items: center;
 }
 
-.wrapper__tools-item {
+.wrapper__tools-item,
+.wrapper__tools-item svg {
     color: $primaryIconColor;
 
     &:hover {
@@ -36,4 +38,8 @@
     &:hover {
         background-color: #e5dfdf;
     }
+}
+
+.item:hover svg{
+    color: $primaryIconColorHover;
 }

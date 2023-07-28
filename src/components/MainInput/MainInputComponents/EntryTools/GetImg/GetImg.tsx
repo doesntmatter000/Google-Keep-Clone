@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { useAppDispatch } from "../../../../../store/hook";
-import { uploadImg } from "../../../../../store/features/imgSlice";
+import { uploadImg } from "../../../../../store/Slices/imgSlice";
 
 export const GetImg = () => {
 

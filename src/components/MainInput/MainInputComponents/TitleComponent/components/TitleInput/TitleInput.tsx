@@ -8,13 +8,17 @@ export const TitleInput = () => {
     setTitleValue(e.target.value)
   };
 
+  const handleInput = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter') e.preventDefault()
+  }
+
   return (
     <>
       <div className="Tcomponent__title" style={titleValue === "" ? {display: "block"} : {display: "none"}}>Titlu</div>
       <textarea
         onChange={(event) => handleEvent(event, "25px")}
         className="Tcomponent__title-text"
-        required
+        onKeyDown={event => handleInput(event)}
       />
     </>
   );

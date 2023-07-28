@@ -5,7 +5,6 @@ type ImagineComponentProps = {
   mainState: boolean
 }
 export const ImagineComponent = ({mainState}:ImagineComponentProps) => {
-  console.log(mainState);
   
   let imagine = useAppSelector(state => state.imgSlice.imgUploaded)
   return (

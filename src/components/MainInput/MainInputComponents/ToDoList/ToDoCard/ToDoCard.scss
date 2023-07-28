@@ -1,0 +1,126 @@
+@import "./../../../../../Tools/colors/colors.scss";
+
+.Card__wrapper {
+  overflow-y: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1cap solid;
+  border-right: transparent;
+  border-left: transparent;
+  border-color: transparent;
+  position: relative;
+
+  &:hover .Card__dndIcon svg {
+    opacity: 1;
+  }
+
+  &:focus-within {
+    border-color: rgba(191, 193, 193, 0.5)
+  }
+}
+
+.Card__addToDoIcon {
+  font-size: 25px;
+  color: $primaryIconColor;
+}
+
+
+
+
+
+.Card__input {
+  resize: none;
+  font-family: Roboto, sans-serif;
+  min-width: 80%;
+  max-width: 80%;
+  height: 20px;
+  outline: none;
+  margin-left: 25px;
+  border: none;
+  background-color: transparent;
+}
+
+.Card__inputoff {
+  resize: none;
+  font-family: Roboto, sans-serif;
+  min-width: 80%;
+  max-width: 80%;
+  height: 20px;
+  border: none;
+  outline: none;
+  margin-left: 25px;
+  background-color: transparent;
+}
+
+.Card__dndIcon {
+  margin-left: 15px;
+  width: 12px;
+  height: 20px;
+  cursor: move;
+
+  & svg {
+    opacity: 0;
+    transition: .1s ease;
+    color: $primaryIconColor;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.Card__checkbox {
+  margin-left: 25px;
+  position: relative;
+
+  & input {
+    display: none;
+  }
+
+
+
+  & label {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    border: 2px solid $primaryIconColor;  
+    cursor: pointer;
+    transition: border-color .1s ease;
+    display: grid;
+    place-items: center;
+
+    & svg {
+      color: $primaryIconColorHover;
+    }
+  }
+
+  &:hover label {
+      border-color: $primaryIconColorHover;
+  }
+}
+
+.Card__deleteIcon {
+  cursor: pointer;
+
+  & svg {
+    display: none;
+    color: $primaryIconColor;
+  }
+}
+
+
+.Card__wrapper:hover .Card__deleteIcon svg {
+  display: block;
+}
+
+.Card__TitleInput {
+  position: absolute;
+  top: 3px;
+  left: 70px;
+  width: 400px;  
+  height: 20px;
+  z-index: -1;
+}
