@@ -53,8 +53,8 @@ export const ToDoCard = ({id, tabIndex, providedDrag, providedDragH, providedRef
   }
 
   return (
-    <div className="Card__wrapper" {...providedDrag} {...providedDragH} ref={providedRef}>
-      <div className="Card__dndIcon" style={ !todo.todoState || todo.finished ? { visibility: "hidden" } : { visibility: "visible" }}>
+    <div className="Card__wrapper" {...providedDrag}  ref={providedRef}>
+      <div className="Card__dndIcon" {...providedDragH} style={ !todo.todoState || todo.finished ? { visibility: "hidden" } : { visibility: "visible" }}>
         <FontAwesomeIcon icon={faGripVertical} />
       </div>
 
