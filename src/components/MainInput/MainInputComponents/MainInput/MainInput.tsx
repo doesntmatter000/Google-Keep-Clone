@@ -1,38 +1,33 @@
-import { useState} from "react";
 import React from "react";
 import "./MainInput.scss";
-
+import { useAppDispatch, useAppSelector } from "../../../../store/hook";
+import { UpdateNoteText } from "../../../../store/Slices/NoteData";
 type openMainInputProps = {
   openMainInput: Function;
-  mainInputState: boolean
 };
 
-export const MainInput = ({ openMainInput, mainInputState }: openMainInputProps) => {
-
-    const [inputValue, setInputValue] = useState<string | null>("")
-
-    const handleEvent = (e: React.FormEvent<HTMLDivElement>, defaultHeight: string) => {
+export const MainInput = ({ openMainInput }: openMainInputProps) => {
+    const dispatch = useAppDispatch()
+    let InputText:string = useAppSelector(state => state.NoteData.text)
+    const handleEvent = (e:React.ChangeEvent<HTMLTextAreaElement>, defaultHeight: string) => {
       e.currentTarget.style.height = defaultHeight;
       e.currentTarget.style.height = `${e.currentTarget.scrollHeight}px`;
-      setInputValue(e.currentTarget.textContent)
-      
+      if (e.currentTarget.value !== null) {
+      dispatch(UpdateNoteText(e.currentTarget.value))
+      }
     };
 
     
 
   return (
     <div className="MainInput__wrapper">
-        <span className={!mainInputState ? "MainInput__Placeholder" : "MainInput__PlaceholderOpen"}
-                style={inputValue === "" ? {display: "block"} : {display: "none"}}>
-            Creeaza o notă...
-        </span>
-      <div
-        onInput={(event) => handleEvent(event, "45px")}
+      <textarea
+        onChange={(event) => handleEvent(event, "49px")}
         className="Main__input"
         onClick={() => openMainInput()}
-        contentEditable={true}
-        aria-placeholder="Creeaza o notă..."
-      ></div>
+        placeholder="Creeaza o notă..."
+        value={InputText}
+      ></textarea>
     </div>
   );
 };

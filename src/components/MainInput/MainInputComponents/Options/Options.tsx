@@ -30,6 +30,7 @@ export const Options = () => {
         <button
           onClick={(e) => switchColor(e.currentTarget)}
           className="color__item default"
+          style={{backgroundColor: "transparent"}}
           ref={prevColor}
         >
           <FontAwesomeIcon icon={faDropletSlash} />
@@ -47,6 +48,7 @@ export const Options = () => {
         <button
           onClick={(e) => switchBackground(e.currentTarget)}
           className="back__item default"
+          style={{backgroundImage: "none"}}
           ref={prevBackground}
         >
           <FontAwesomeIcon icon={faImage} />

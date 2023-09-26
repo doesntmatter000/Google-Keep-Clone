@@ -1,0 +1,17 @@
+.DefaultTitle {
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & img {
+    width: 44px;
+    height: 40px;
+    column-gap: 15px;
+  }
+
+  & span {
+    font-size: 28px;
+    color: rgb(119, 113, 113);
+  }
+}

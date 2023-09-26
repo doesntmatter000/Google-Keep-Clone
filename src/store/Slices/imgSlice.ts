@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import { PayloadAction } from "@reduxjs/toolkit/dist/createAction"
 
 type ImgState = {
-    imgUploaded: string | null
+    imgUploaded: string | null | ArrayBuffer
 }
 
 const initialState: ImgState = {
@@ -13,7 +13,7 @@ export const imgSlice = createSlice({
     name: "img",
     initialState,
     reducers: {
-        uploadImg: (state, action: PayloadAction<string | null>) => {
+        uploadImg: (state, action: PayloadAction<string | null | ArrayBuffer>) => {
             state.imgUploaded = action.payload
         }
     }

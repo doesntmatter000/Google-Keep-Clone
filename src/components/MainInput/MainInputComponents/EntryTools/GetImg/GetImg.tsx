@@ -6,6 +6,19 @@ import { uploadImg } from "../../../../../store/Slices/imgSlice";
 export const GetImg = () => {
 
   const dispatch = useAppDispatch()
+
+  const handleImageChange = (event:any) => {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        dispatch(uploadImg(e.target!.result));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   
   return (
     <label className="label" htmlFor="file">
@@ -13,12 +26,8 @@ export const GetImg = () => {
         <input
           type="file"
           id="file"
-          accept="/file/*"
-          onChange={(e) => {
-            if (e.target.files !== null) {
-              dispatch(uploadImg(URL.createObjectURL(e.target.files[0])))
-            }
-          }}
+          accept="/image/*"
+          onChange={handleImageChange}
           style={{ display: "none" }}
         />
         <FontAwesomeIcon icon={faImage} />

@@ -22,21 +22,16 @@ export const MainInputComponent = () => {
       <div className="Main__innerWrraper">
         <TitleIcon mainState={mainState} />
         <ImagineComponent mainState={mainState || imgToggleMainOpen} />
-        <div
-          className="wrapper"
-          style={backImage ? {backgroundImage: `${backImage}`} : { backgroundImage: "none" }}>
+        <div className="wrapper" style={backImage ? { backgroundImage: `${backImage}` } : { backgroundImage: "none" }}>
           <div className="ddd">
             <TitleComopent comoponentState={mainState} />
             <ToDoList toDoState={toDoState} />
             <div className="entry__wrapper" style={toDoState ? { display: "none" } : { display: "flex" }}>
-              <MainInput
-                openMainInput={openMainInput}
-                mainInputState={mainState}
-              />
+              <MainInput openMainInput={openMainInput}/>
               <EntryTools mainState={mainState || imgToggleMainOpen} toggleToDoState={toggleToDoState} />
             </div>
           </div>
-        </div>     
+        </div>
       </div>
       <MainTools mainState={mainState || imgToggleMainOpen} />
     </div>

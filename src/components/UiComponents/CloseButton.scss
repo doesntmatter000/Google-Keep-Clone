@@ -1,0 +1,13 @@
+.CloseButton {
+  padding: 8px 24px;
+  border-radius: 4px;
+  width: fit-content;
+  cursor: pointer;
+  color: var(--mainText-color);
+  background-color: transparent;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: var(--bgIcon-color);
+  }
+}

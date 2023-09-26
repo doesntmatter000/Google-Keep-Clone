@@ -4,6 +4,7 @@
   right: 7.5px;
   top: 5px;
   z-index: 100;
+  color: var(--icon-color);
 }
 
 .title__svg {
@@ -13,7 +14,7 @@
   width: 23px;
   height: 23px;
 
-  color: #757575;
+  color: var(--icon--color);
   cursor: pointer;
 
   & svg {

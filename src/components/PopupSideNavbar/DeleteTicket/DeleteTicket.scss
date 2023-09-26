@@ -1,0 +1,31 @@
+.deleteTicket {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .3);
+  }
+  
+  .deleteTicket__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .deleteTicket__content {
+    width: 500px;
+    padding: 24px;
+    height: 140px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .deleteTickets__buttons {
+    display: flex;
+    align-items: end;
+    height: 60px;
+    justify-content: end;
+    column-gap: 50px;
+  }

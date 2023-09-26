@@ -1,4 +1,3 @@
-@import "../../../../Tools/colors/colors.scss";
 
 .Tools {
     display: flex;
@@ -19,11 +18,7 @@
 
 .wrapper__tools-item,
 .wrapper__tools-item svg {
-    color: $primaryIconColor;
-
-    &:hover {
-        color: $primaryIconColorHover;
-    }
+    color: var(--icon-color);
 }
 
 .Tools__button {
@@ -34,12 +29,13 @@
     transition: background-color .3s ease;
     cursor: pointer;
     font-size: 15px;
+    color: var(--mainText-color);
 
     &:hover {
-        background-color: #e5dfdf;
+        background-color: var(--bgIcon-color);
     }
 }
 
 .item:hover svg{
-    color: $primaryIconColorHover;
+    color: black;
 }

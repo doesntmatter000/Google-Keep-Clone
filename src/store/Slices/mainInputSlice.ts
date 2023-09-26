@@ -12,7 +12,7 @@ type mainInputState = {
     todos: todoapp[]
 }
 
-interface todoapp {
+export interface todoapp {
     id: string;
     finished: boolean;
     todoState: boolean;
@@ -22,7 +22,7 @@ interface todoapp {
 const initialState: mainInputState = {
     mainState: false,
     imgState: false,
-    backcolor: "#fff",
+    backcolor: "var(--bg-color)",
     backImage: "none",
     optionsToggle: false,
     toDoListState: false,
@@ -45,6 +45,7 @@ export const mainInputState = createSlice({
         },
         changeBackImage: (state, action: PayloadAction<string>) => {
             state.backImage = action.payload
+            console.log(action.payload, "backImage lol");
         },
         toggleOptions: (state, action: PayloadAction<boolean>) => {
             state.optionsToggle = action.payload
@@ -90,7 +91,7 @@ export const mainInputState = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(uploadImg, (state, action: PayloadAction<string | null>) => {
+        builder.addCase(uploadImg, (state, action: PayloadAction<string | null | ArrayBuffer>) => {
             action.payload === null ? state.imgState = false : state.imgState = true;
         });
     },

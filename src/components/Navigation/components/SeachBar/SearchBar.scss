@@ -1,0 +1,67 @@
+
+.SearchBar {
+  background-color: var(--searchBar-color);
+  width: 725px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  column-gap: 20px;
+  transition: .3s ease;
+  margin-left: 50px;
+  &:focus-within {
+    box-shadow: 1px 1px 3px 0px rgba(154, 150, 150, 0.75);
+    background-color: var(--searchBarFocus-color);
+  }
+
+  & svg {
+    color: var(--icon-color);
+  }
+
+  & input {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    outline: none;
+    width: 100%;
+    color: var(--mainText-color);
+  }
+}
+
+.SearchBar__Find {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: .3s ease;
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: var(--bgIcon-color);
+  }
+}
+
+.SearchBar___Clear {
+  height: 39px;
+  width: 45px;
+  cursor: pointer;
+  transition: .3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: var(--bgIcon-color);
+  }
+
+  & svg {
+    color: var(--bgIcon-color);
+    height: 21px;
+    width: 21px;
+  }
+}
+
