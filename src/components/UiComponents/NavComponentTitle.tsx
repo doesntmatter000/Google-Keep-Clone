@@ -1,4 +1,3 @@
-import React from 'react'
 import './NavComponentTitle.scss'
 
 type NavCompoentTitleProps = {
