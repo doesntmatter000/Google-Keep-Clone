@@ -4,7 +4,6 @@ import {
   ImagineComponent,
   MainTools,
   TitleComopent,
-  TitleIcon,
   MainInput,
   ToDoList,
 } from "./";
@@ -20,7 +19,6 @@ export const MainInputComponent = () => {
   return (
     <div className="Main" ref={mainRef}>
       <div className="Main__innerWrraper">
-        <TitleIcon mainState={mainState} />
         <ImagineComponent mainState={mainState || imgToggleMainOpen} />
         <div className="wrapper" style={backImage ? { backgroundImage: `${backImage}` } : { backgroundImage: "none" }}>
           <div className="ddd">

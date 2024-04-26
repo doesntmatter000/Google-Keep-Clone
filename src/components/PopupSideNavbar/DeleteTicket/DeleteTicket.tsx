@@ -1,4 +1,3 @@
-import React from 'react'
 import "./DeleteTicket.scss"
 import { CloseButton } from '../../UiComponents/CloseButton'
 
